@@ -30,7 +30,7 @@ const Question = () => {
           >
             PARODY
           </button>
-          <ul key={item.id} className='list-unstyled'>
+          <ul key={item.id} className='list-unstyled text-white'>
             <li className='mt-3 p-2'>
               <a
                 href={item.url}
@@ -43,6 +43,7 @@ const Question = () => {
               <span className='text-muted'>{item.date}</span>
             </li>
           </ul>
+          <h5 className='text-white'>{results.answered && results.correct}</h5>
         </div>
       );
     });
@@ -72,7 +73,7 @@ const Question = () => {
     return postSelected;
   };
 
-  const triviaResults = (
+  const TriviaResults = (
     <div>
       <h3 className='text-white'>RESULTS</h3>
       <h2 className='text-white'>{results.numberCorrect}/5</h2>
@@ -88,7 +89,7 @@ const Question = () => {
   return (
     <div className='question d-flex justify-content-center'>
       <div className='col-sm-6 d-block text-center'>
-        {results.numberOfAnswers < 5 ? <RandomPost /> : triviaResults}
+        {results.numberOfAnswers < 5 ? <RandomPost /> : TriviaResults}
       </div>
     </div>
   );
