@@ -20,22 +20,27 @@ const Question = () => {
         <div>
           <button
             onClick={() => checkAnswer(item.true === "1")}
-            className="btn btn-info m-3"
+            className='btn btn-info m-3'
           >
             REAL
           </button>
           <button
             onClick={() => checkAnswer(item.true === "0")}
-            className="btn btn-info m-3"
+            className='btn btn-info m-3'
           >
             PARODY
           </button>
-          <ul key={item.id} className="list-unstyled">
-            <li className="mt-3 p-2">
-              <a href={item.url} target="_blank">
+          <ul key={item.id} className='list-unstyled'>
+            <li className='mt-3 p-2'>
+              <a
+                href={item.url}
+                target='_blank'
+                rel='noopener noreferrer'
+                className='text-white'
+              >
                 {item.text}
               </a>{" "}
-              <span className="text-muted">{item.date}</span>
+              <span className='text-muted'>{item.date}</span>
             </li>
           </ul>
         </div>
@@ -69,10 +74,10 @@ const Question = () => {
 
   const triviaResults = (
     <div>
-      <h3>RESULTS</h3>
-      <h2>{results.numberCorrect}/5</h2>
+      <h3 className='text-white'>RESULTS</h3>
+      <h2 className='text-white'>{results.numberCorrect}/5</h2>
       <button
-        className="btn btn-secondary m-3"
+        className='btn btn-secondary m-3'
         onClick={() => window.location.reload(false)}
       >
         RESET
@@ -81,8 +86,8 @@ const Question = () => {
   );
 
   return (
-    <div className="question d-flex justify-content-center">
-      <div className="col-sm-6 d-block text-center">
+    <div className='question d-flex justify-content-center'>
+      <div className='col-sm-6 d-block text-center'>
         {results.numberOfAnswers < 5 ? <RandomPost /> : triviaResults}
       </div>
     </div>
