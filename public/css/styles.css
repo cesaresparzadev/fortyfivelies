@@ -1,0 +1,21 @@
+body {
+  background-color: #343a40;
+}
+
+.container-fluid {
+  padding: 0;
+}
+
+h1 {
+  color: #a9a9a9;
+}
+
+h5 a,
+h5 a:hover,
+h5 a:active,
+ul li a,
+ul li a:hover,
+ul li a:active {
+  color: white;
+  text-decoration: none;
+}

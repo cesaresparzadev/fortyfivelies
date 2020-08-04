@@ -4,7 +4,7 @@ import Question from "./Question";
 
 function App() {
   return (
-    <div className='App container-fluid'>
+    <div className="App container-fluid">
       <Header />
       <Question />
     </div>
