@@ -1,12 +1,14 @@
 import React from "react";
 import Header from "./components/Header";
-import Question from "./Question";
+import Main from "./components/Main";
+import Footer from "./components/Footer";
 
 function App() {
   return (
-    <div className="App container-fluid">
+    <div className='App container-fluid'>
       <Header />
-      <Question />
+      <Main />
+      <Footer />
     </div>
   );
 }

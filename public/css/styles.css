@@ -5,3 +5,11 @@ body {
 .container-fluid {
   padding: 0;
 }
+
+footer {
+  background-color: slategray;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+}
